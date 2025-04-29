@@ -11,7 +11,7 @@ else()
   message(STATUS "Compiling with architecture-specific SIMD flags for portability")
   
   if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|AMD64|amd64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "i386|i686")
-    message(STATUS "x86 architecture detected, adding SSE4.2 flags")
+    message(STATUS "x86 architecture detected, adding SSE flags")
     add_compile_options(-msse -msse2 -msse3 -msse4 -msse4.1 -msse4.2)
   elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64|ARM64|arm64")
     message(STATUS "ARM64 architecture detected, skipping SSE4.2 flags")
